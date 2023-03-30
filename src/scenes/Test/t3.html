@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purchasing Api</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <h1 style="font-size:20px;color:#6a5acd;margin-left:600px;">TEST PAGE</h1>
+  <button class="header__btnsend">
+    <a href="http://localhost:3000/purchasing-api/test">BACK</a></button>
+  <div class="wraper">
+    <header class="header">
+      <select class="header__methods" id="header-methods">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      <input type="text" class="header__url" id="header-url" disabled="disabled"
+        value="https://apim.devtest.aws.scania.com/purchasing/dev/commodity-groups/v1?pageNo=1&pageSize=10" />
+      <button id="btn_send" class="header__btnsend">SEND</button>
+    </header>
+
+
+    <section class="menu-items">
+      <ul>
+
+        <li>
+          <button id="btn-body" class="active"></button>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="menu-items-body">
+      <table class="table" id="table">
+        <thead>
+          <th>KEY</th>
+          <th>VALUE</th>
+    
+        </thead>
+        <tbody id="table-body">
+          <tr id="btn-params" class="">
+            <td id="btn-params" class=""><input id="btn-params" type="text" placeholder="Key"
+                value="pageNo" disabled="disabled" /></td>
+            <td><input id="btn-params" type="text" placeholder="Value" value="1" /></td>
+            <!-- <td>
+              <input type="text" placeholder="Description" />
+            </td> -->
+          </tr>
+          <tr id="btn-params" class="">
+            <td id="btn-params" class=""><input id="btn-params" type="text" placeholder="Key"
+                value="pageSize" disabled="disabled" /></td>
+            <td><input id="btn-params" type="text" placeholder="Value" value="10" /></td>
+            <!-- <td>
+              <input type="text" placeholder="Description" />
+            </td> -->
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <section class="response" id="response">
+      <!-- <pre><code id="json-container"></code></pre>
+      <script>
+        const data = {
+          "data": [
+            {
+              "orderNumber": "0839891",
+              "orderTypeCode": "COO",
+              "orderStateCode": "SEN",
+              "orderStateName": "Order ready",
+              "attestStateCode": "ATT",
+              "attestStateName": "Attested order",
+              "orderDate": "2013-04-04",
+              "serialDate": null,
+              "attestDate": "2013-04-05",
+              "currencyCode": "EUR",
+              "projectNumber": null,
+              "costCenter": null,
+              "account": null,
+              "purchaseOrderCategory": "PO",
+              "source": "matris",
+              "remark": "Price is according to agreement with Jennifer Luft.",
+              "note": null,
+              "supplier": {
+                "supplierNumber": "0731601",
+                "supplierName": "INDUSTRIAL FLEXO, S.L."
+              },
+              "purchaser": {
+                "purchaserCode": "R8",
+                "purchaserName": "Nadine Szabo"
+              },
+              "deliveryTerm": {
+                "deliveryTermCode": "FCA",
+                "deliveryTermName": "Free Carrier"
+              },
+              "paymentTerm": {
+                "paymentTermCode": "020",
+                "paymentTermDescription": "60 days net",
+                "paymentTermDaysOfCredit": 60
+              },
+              "productionUnits": [],
+              "orderLines": [
+                {
+                  "sequenceNumber": 0,
+                  "partNumber": "1494334",
+                  "supplierPartNumber": null,
+                  "price": 7.98,
+                  "unit": "PCE",
+                  "perUnit": 1,
+                  "quantity": 0,
+                  "requisitionNumber": null,
+                  "sourceRequisitionNumber": null,
+                  "paRow": null,
+                  "partVersion": null,
+                  "remark": null,
+                  "requestedDeliveryDate": null,
+                  "confirmedDeliveryDate": null
+                }
+              ]
+            }
+          ]
+        }
+
+        document.getElementById('json-container').innerHTML = JSON.stringify(data, null, 2);
+      </script> -->
+    </section>
+    <div class="loading" id="loading">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <script src="./script2.js"></script>
+  </div>
+
+
+
+
+
+
+  <!-- <script src="./script.js"></script> -->
+</body>
+
+</html>
